@@ -19,8 +19,12 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www
 COPY . /var/www
 
-RUN composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs \
-    && mkdir -p storage/app/public storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache \
+ENV COMPOSER_ALLOW_SUPERUSER=1
+
+RUN mkdir -p storage/app/public storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs bootstrap/cache \
+    && cp /var/www/database/demo.sqlite /var/www/database/database.sqlite \
+    && chmod 666 /var/www/database/database.sqlite /var/www/database/demo.sqlite \
+    && composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs \
     && chmod -R 775 storage bootstrap/cache \
     && chmod +x /var/www/docker-entrypoint.sh
 
