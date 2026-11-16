@@ -1,0 +1,101 @@
+/* A to Z unified action button styles */
+.az-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.az-btn { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; line-height: 1.2; border-radius: 6px; padding: 8px 12px; border: 1px solid transparent; text-decoration: none; cursor: pointer; transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease, box-shadow 120ms ease; }
+.az-btn i { font-size: 14px; }
+
+.az-btn:focus { outline: none; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25); }
+.az-btn.is-disabled, .az-btn[disabled] { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
+
+/* Variants */
+.az-btn-primary { background-color: #2563eb; color: #fff; border-color: #1d4ed8; }
+.az-btn-primary:hover { background-color: #1d4ed8; }
+.az-btn-primary:active { background-color: #1e40af; }
+
+.az-btn-secondary { background-color: #f3f4f6; color: #111827; border-color: #d1d5db; }
+.az-btn-secondary:hover { background-color: #e5e7eb; }
+.az-btn-secondary:active { background-color: #d1d5db; }
+
+.az-btn-outline { background-color: transparent; color: #374151; border-color: #4b5563; }
+.az-btn-outline:hover { background-color: #f9fafb; }
+.az-btn-outline:active { background-color: #f3f4f6; }
+
+.az-btn-danger { background-color: #dc2626; color: #fff; border-color: #b91c1c; }
+.az-btn-danger:hover { background-color: #b91c1c; }
+.az-btn-danger:active { background-color: #991b1b; }
+
+/* Sizes */
+.az-btn-sm { padding: 6px 10px; font-size: 13px; }
+.az-btn-lg { padding: 10px 16px; font-size: 15px; }
+
+/* Dropdown button alignment fixes */
+.az-btn-group { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Generic table actions containment: prevent spillover in last column */
+/* Applies site-wide so pages like Payslips, Invoices, etc. keep buttons inside the cell */
+.table td .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-start;
+}
+
+/* Slightly widen the Actions column when tables are in cards to avoid overflow */
+.card .table thead th:last-child,
+.card .table tbody td:last-child {
+  min-width: 200px;
+}
+
+/* Mobile-friendly adjustments: wrap actions and scale text */
+@media (max-width: 576px) {
+  .az-actions, .btn-group, .az-btn-group { flex-wrap: wrap; }
+  .az-btn { font-size: clamp(12px, 3.5vw, 14px); padding: 6px 10px; height: auto; }
+}
+
+/* --- Timesheet Filter UI (matches reference image) --- */
+.ts-filter__row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.ts-filter__group { flex: 0 0 auto; }
+.ts-filter__input { height:40px; padding:0 16px; border-radius:20px; border:1px solid #e0e0e0; background:#fff; font-size:14px; font-weight:500; color:#111; min-width:200px; }
+.ts-filter__group--date .ts-filter__input { min-width:280px; }
+.ts-filter__input::placeholder { color:#999; }
+.ts-filter__actions { display:flex; align-items:center; gap:10px; }
+.ts-filter__btn { height:40px; padding:0 18px; border-radius:20px; font-size:14px; font-weight:600; transition: all 300ms ease-in-out; }
+
+/* Button color specs to match reference */
+.ts-filter__btn.btn--secondary { background:#f4b03a; color:#000; border:none; }
+.ts-filter__btn.btn--secondary:hover { filter:brightness(0.95); }
+.ts-filter__btn.btn--secondary:active { transform:scale(0.98); }
+
+.ts-filter__btn.btn--primary { background:#000; color:#fff; border:none; }
+.ts-filter__btn.btn--primary:hover { filter:brightness(1.1); }
+.ts-filter__btn.btn--primary:active { transform:scale(0.98); }
+
+.ts-filter__btn.btn--delete { background:#e53935; color:#fff; border:none; }
+.ts-filter__btn.btn--delete:hover { filter:brightness(1.05); }
+.ts-filter__btn.btn--delete:active { transform:scale(0.98); }
+
+/* Animated visibility for extra actions */
+#ts-generate-invoice-btn, #ts-clear-btn { opacity:0; transform:translateY(-6px); pointer-events:none; }
+#ts-generate-invoice-btn.ts-visible, #ts-clear-btn.ts-visible { opacity:1; transform:translateY(0); pointer-events:auto; }
+
+/* Focus/disabled states */
+.ts-filter__btn:focus { outline:2px solid #4c9ffe; outline-offset:2px; }
+.ts-filter__btn:disabled { opacity:0.5; cursor:not-allowed; }
+
+/* Inputs focus */
+.ts-filter__input:focus { outline:2px solid #4c9ffe; }
+
+/* --- Accessible Confirmation Modal (global) --- */
+.az-confirm__backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display:none; align-items: center; justify-content: center; z-index: 2000; opacity:0; transition: opacity 300ms ease-in-out; }
+.az-confirm__backdrop.is-open { display:flex; }
+.az-confirm__backdrop.is-visible { opacity:1; }
+.az-confirm { background:#fff; color:#111; width:420px; max-width:90vw; border-radius:14px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transform: scale(0.98); opacity:0; transition: transform 300ms ease-in-out, opacity 300ms ease-in-out; }
+.az-confirm.is-visible { transform: scale(1); opacity:1; }
+.az-confirm__body { padding:20px; }
+.az-confirm__title { font-size:18px; font-weight:700; margin:0 0 8px; }
+.az-confirm__desc { font-size:14px; margin:0 0 18px; }
+.az-confirm__actions { display:flex; gap:12px; justify-content:flex-end; padding:0 20px 20px 20px; }
+.az-confirm__btn { height:40px; padding:0 18px; border-radius:20px; font-size:14px; font-weight:600; border:none; cursor:pointer; }
+.az-confirm__btn--primary { background:#000; color:#fff; }
+.az-confirm__btn--secondary { background:#f3f4f6; color:#111; }
+.az-confirm__btn:focus { outline:2px solid #4c9ffe; outline-offset:2px; }

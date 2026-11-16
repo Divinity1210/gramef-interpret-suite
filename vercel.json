@@ -1,0 +1,49 @@
+{
+    "version": 2,
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.2",
+            "maxDuration": 30,
+            "includeFiles": "public/**",
+            "excludeFiles": "{tests/**,docs/**,storage/**,*.sql,node_modules/**,vendor/aws/aws-sdk-php/src/data/**,vendor/mpdf/mpdf/ttfonts/**,vendor/mpdf/mpdf/data/**,vendor/dompdf/dompdf/lib/fonts/**,scripts/**,vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Locale/**}"
+        },
+        "api/health.php": {
+            "runtime": "vercel-php@0.7.2",
+            "maxDuration": 10,
+            "excludeFiles": "{tests/**,docs/**,storage/**,*.sql,node_modules/**,vendor/aws/aws-sdk-php/src/data/**,vendor/mpdf/mpdf/ttfonts/**,vendor/mpdf/mpdf/data/**,vendor/dompdf/dompdf/lib/fonts/**,scripts/**,vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Locale/**}"
+        }
+    },
+    "routes": [
+        {
+            "src": "/api/health",
+            "dest": "/api/health.php"
+        },
+        {
+            "src": "/.well-known/(.*)",
+            "dest": "/.well-known/$1",
+            "continue": true
+        },
+        {
+            "src": "/(.*)",
+            "methods": [
+                "OPTIONS"
+            ],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept, X-Requested-With",
+                "Access-Control-Max-Age": "86400"
+            },
+            "status": 204
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php",
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Accept, X-Requested-With"
+            }
+        }
+    ]
+}

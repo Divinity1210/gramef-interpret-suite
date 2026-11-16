@@ -1,0 +1,90 @@
+A to Z Interpreting
+Invoicing, Payslip, and Remittance Process Flow
+Invoicing Process for Agents
+Adding Job Amounts and Expenses
+Agents input amounts for each job, including additional expenses such as packaging, repairs, or travel.
+Upon submission, the total invoice amount is automatically calculated.
+Agents can repeat this for multiple jobs and proceed to invoice generation at the end of the month.
+Explanation: The invoicing process begins when agents assign a value to each job. This value includes core job costs and any applicable expenses like travel or repairs. Once all details are submitted, an invoice amount reflecting the total cost is generated. Agents can perform this task across multiple jobs and finalize the invoice when ready.
+Generating Invoices
+At the month's end, agents select a date range to generate a consolidated invoice.
+The generated invoice is saved in the Invoice menu.
+Agents can review individual jobs within an invoice and print the document if necessary.
+Explanation: At the end of each billing cycle, agents can generate an invoice encompassing all relevant jobs within a specific timeframe. The generated invoice is stored under the Invoice menu for easy access and future reference. Agents can inspect details of individual jobs linked to the invoice and print copies when needed.
+Admin Notification and Review
+The admin receives an email alert for newly created invoices.
+The invoice appears in the admin’s Invoice menu for review.
+Explanation: Once an agent submits an invoice, an automatic notification is sent to the admin, ensuring timely processing. The admin can access the invoice via their dashboard for verification and approval.
+Creating Payslips
+Admin reviews the invoice details and initiates payslip creation.
+The payslip lists jobs for which the agent requests payment.
+Admin has the ability to:
+Modify job amounts (increase or decrease values assigned by the agent).
+Add additional jobs using the agent’s Job ID.
+Remove jobs from the list.
+After finalizing adjustments, the payslip is created and saved under the Payslip menu.
+Both admin and agent can access the payslip details.
+Explanation: Payslips serve as a breakdown of jobs that require payment processing. Admins review each invoice and adjust figures if necessary. Additional jobs can be added, and unnecessary items can be removed before finalizing the payslip. Once completed, both the agent and admin can view the details.
+Admin Actions on Payslip
+Admin has three key options:
+Re-edit Payslip: Modify job entries or payment amounts.
+View & Print Payslip: Generate a formatted version for records.
+Approve Payslip: Confirm payment upon completion.
+Explanation: The payslip process provides flexibility for revisions. Admins can make necessary adjustments, print formatted versions for documentation, and officially approve payments once they have been processed.
+Agent Bank Information
+Agents must update their bank details via the "My Account" menu before payment.
+If bank details are missing, they appear as N/A in the admin's view.
+Explanation: To facilitate seamless transactions, agents must ensure that their banking details are up to date. If no details are provided, the system will display "N/A," prompting the agent to complete this requirement before payment can be processed.
+Finalizing Payment
+Upon payment, the admin marks the payslip as "Paid," concluding the invoicing and payslip process.
+Explanation: The final step in the agent payment cycle is confirmation of payment. Once the funds are transferred, the admin updates the status, signaling the end of the transaction.
+
+
+
+
+
+Invoicing Process for Clients
+Preparing Client Invoices
+Admin verifies that jobs are signed and recorded in the Timesheet table.
+Jobs can be filtered by agent name, client name, date range, or invoice amount.
+Admin can generate an invoice for multiple jobs or a single job.
+Explanation: Before invoicing clients, jobs must be validated and properly recorded. Admins use filters to narrow down the list of jobs that need to be invoiced and can choose to create a single or bulk invoice.
+Adding Invoice Details
+Admin adjusts amounts, surcharges, and other charges.
+VAT applicability is determined via a dropdown selection.
+The invoice amount is updated accordingly.
+Explanation: Invoices must be reviewed for accuracy before finalization. Admins can modify amounts, include applicable surcharges, and decide on VAT inclusion. These settings ensure compliance with financial policies before proceeding with invoice generation.
+Generating Client Invoices
+Admin filters jobs for invoicing and clicks "Create Invoice."
+A summary page displays all job details for final review.
+Admin selects VAT status and invoice type.
+Clicking "Generate Invoice" produces the formatted invoice with complete details.
+The invoice is then sent to the client.
+Explanation: The invoice generation process allows admins to review all job data, choose VAT preferences, and select the type of invoice format to be used. Once confirmed, the invoice is sent to the client for processing.
+Client Notification and Access
+Clients receive a notification and access the invoice via the Client Invoice table.
+The same invoice is stored under the admin's Remittance table.
+Clients can:
+View invoice details, total amounts, and individual job breakdowns.
+Print invoice templates if needed.
+Explanation: Once an invoice is created, clients receive an alert and can access the document through their dashboard. They have full visibility of job details, expenses, and payment breakdowns.
+Client Remittance and Payment Approval
+Clients upload a remittance slip upon payment.
+If issues arise, they must contact the admin for corrections.
+Admin reviews payment via the Remittance menu.
+If payment fails, clients can upload a new remittance slip.
+Once confirmed, the admin marks the invoice as paid.
+Explanation: Clients are responsible for providing proof of payment through remittance slips. If errors occur, adjustments can be made through admin intervention. Once payment is verified, the invoice status updates to "Paid."
+Exports and Reports
+Admins can export invoices, payslips, and remittances based on:
+Client name
+Agent name
+Date range
+Exported data includes:
+Job details
+Invoice ID
+Payslip ID
+Remittance ID
+Explanation: For reporting purposes, admins can generate exports using specific filters. These reports provide a comprehensive overview of financial transactions across different time periods and stakeholders.
+
+This document outlines the invoicing, payslip, and remittance process for A to Z Interpreting, ensuring a structured and transparent financial workflow.

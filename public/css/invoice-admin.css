@@ -1,0 +1,683 @@
+/* Payslip Modal Styles */
+.payslip-modal .modal-dialog {
+    max-width: 1200px;
+}
+
+.payslip-modal .modal-body {
+    padding: 2rem;
+}
+
+.payslip-modal .table-responsive {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    overflow: hidden;
+}
+
+.payslip-modal .table {
+    margin-bottom: 0;
+}
+
+.payslip-modal .table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #495057;
+    padding: 1rem 0.75rem;
+}
+
+.payslip-modal .table tbody td {
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+}
+
+.payslip-modal .table-warning {
+    background-color: #fff3cd;
+}
+
+.payslip-modal .table-warning td {
+    border-color: #ffeaa7;
+}
+
+.payslip-modal .admin-amount-input {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.payslip-modal .admin-amount-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+    outline: 0;
+}
+
+/* Enhanced Payslip Button Styles */
+.payslip-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.payslip-btn:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.4);
+    color: white;
+}
+
+.payslip-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.payslip-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.payslip-btn:hover::before {
+    left: 100%;
+}
+
+.payslip-modal .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.payslip-modal .alert {
+    border-radius: 6px;
+    border: none;
+    padding: 1rem;
+}
+
+.payslip-modal .alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.payslip-modal .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.payslip-modal .alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Add Job Modal Styles */
+#addJobModal .modal-dialog {
+    max-width: 600px;
+}
+
+#addJobModal .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+}
+
+#addJobModal .alert {
+    border-radius: 6px;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payslip-modal .modal-dialog {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+    
+    .payslip-modal .modal-body {
+        padding: 1rem;
+    }
+    
+    .payslip-modal .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .payslip-modal .admin-amount-input {
+        width: 70px !important;
+        font-size: 0.75rem;
+    }
+}
+
+/* Animation for audit trail */
+#auditTrailSection {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading spinner styles */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Enhanced button styles for payslip actions */
+.btn-outline-success:hover {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+}
+
+/* CSS Custom Properties for Design System */
+:root {
+    /* Primary Color Palette */
+    --primary-color: #2196F3;
+    --primary-hover: #1976D2;
+    --primary-active: #1565C0;
+    
+    /* Secondary Colors */
+    --secondary-color: #6C757D;
+    --secondary-hover: #5A6268;
+    --secondary-active: #495057;
+    
+    /* Success Colors */
+    --success-color: #28A745;
+    --success-hover: #218838;
+    --success-active: #1E7E34;
+    
+    /* Info Colors */
+    --info-color: #17A2B8;
+    --info-hover: #138496;
+    --info-active: #117A8B;
+    
+    /* Warning Colors */
+    --warning-color: #FFC107;
+    --warning-hover: #E0A800;
+    --warning-active: #D39E00;
+    
+    /* Danger Colors */
+    --danger-color: #DC3545;
+    --danger-hover: #C82333;
+    --danger-active: #BD2130;
+    
+    /* Advanced Filters Colors */
+    --filter-color: #2E7D32;
+    --filter-hover: #1B5E20;
+    --filter-active: #0D3C12;
+    
+    /* Button Dimensions */
+    --btn-height: 40px;
+    --btn-padding: 0 16px;
+    --btn-border-radius: 4px;
+    --btn-font-size: 14px;
+    --btn-font-weight: 500;
+    
+    /* Transitions */
+    --transition-fast: 200ms ease-in-out;
+    --transition-medium: 300ms ease-in-out;
+    
+    /* Shadows */
+    --btn-shadow-active: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --btn-shadow-focus: 0 0 0 3px rgba(33, 150, 243, 0.25);
+}
+
+/* Base Button Styles */
+.btn {
+    height: var(--btn-height);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: var(--btn-shadow-focus);
+}
+
+.btn:active {
+    box-shadow: var(--btn-shadow-active);
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: white;
+}
+
+.btn-primary:active {
+    background-color: var(--primary-active);
+    border-color: var(--primary-active);
+}
+
+/* Success Button Styles */
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: var(--success-hover);
+    border-color: var(--success-hover);
+    color: white;
+}
+
+.btn-success:active {
+    background-color: var(--success-active);
+    border-color: var(--success-active);
+}
+
+/* Info Button Styles */
+.btn-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: var(--info-hover);
+    border-color: var(--info-hover);
+    color: white;
+}
+
+.btn-info:active {
+    background-color: var(--info-active);
+    border-color: var(--info-active);
+}
+
+/* Warning Button Styles */
+.btn-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #212529;
+}
+
+.btn-warning:hover {
+    background-color: var(--warning-hover);
+    border-color: var(--warning-hover);
+    color: #212529;
+}
+
+.btn-warning:active {
+    background-color: var(--warning-active);
+    border-color: var(--warning-active);
+}
+
+/* Danger Button Styles */
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-hover);
+    border-color: var(--danger-hover);
+    color: white;
+}
+
+.btn-danger:active {
+    background-color: var(--danger-active);
+    border-color: var(--danger-active);
+}
+
+/* Secondary Button Styles */
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
+    color: white;
+}
+
+.btn-secondary:active {
+    background-color: var(--secondary-active);
+    border-color: var(--secondary-active);
+}
+
+/* Outline Button Styles */
+.btn-outline-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-secondary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
+}
+
+.btn-outline-info {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: white;
+}
+
+.btn-outline-info:hover {
+    background-color: var(--info-color);
+    border-color: var(--info-color);
+    color: white;
+}
+
+.btn-outline-warning {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #212529;
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: #212529;
+}
+
+/* Advanced Filters Button */
+.btn-filter {
+    background-color: var(--filter-color);
+    border-color: var(--filter-color);
+    color: white;
+}
+
+.btn-filter:hover {
+    background-color: var(--filter-hover);
+    border-color: var(--filter-hover);
+    color: white;
+}
+
+.btn-filter:active {
+    background-color: var(--filter-active);
+    border-color: var(--filter-active);
+}
+
+/* Dropdown Toggle Enhancements */
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    transition: transform var(--transition-medium);
+    margin-left: 8px;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-toggle.show::after {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu Animations */
+.dropdown-menu {
+    transition: all var(--transition-medium);
+    transform-origin: top;
+    border-radius: var(--btn-border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    min-width: 160px;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 0.5rem 0;
+}
+
+/* Dropdown positioning adjustments */
+.dropdown-menu.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+/* Ensure dropdown stays within viewport */
+.dropdown {
+    position: relative;
+}
+
+.btn-group {
+    position: relative;
+}
+
+/* Ensure action buttons do not overflow; allow wrapping and responsive sizing */
+.invoice-row .btn-group,
+.table td .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+}
+
+/* Responsive action buttons: let text scale and buttons grow vertically */
+.btn-action {
+    height: auto;
+    min-height: 32px;
+    line-height: 1.2;
+    padding: 6px 10px;
+    font-size: clamp(12px, 2.6vw, 14px);
+    white-space: normal; /* allow text to wrap inside button on small screens */
+}
+
+/* Slightly widen the Actions column on small screens to reduce spillover */
+@media (max-width: 768px) {
+    .card .table thead th:last-child,
+    .card .table tbody td:last-child {
+        min-width: 220px;
+    }
+}
+
+/* Responsive dropdown positioning */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: fixed;
+        top: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        width: 90vw;
+        max-width: 280px;
+        margin-top: 0.5rem;
+    }
+}
+
+.dropdown-menu.show {
+    animation: dropdownFadeIn var(--transition-medium) ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scaleY(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+/* Button Group Enhancements */
+.btn-group .btn {
+    border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: var(--btn-border-radius);
+    border-bottom-left-radius: var(--btn-border-radius);
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: var(--btn-border-radius);
+    border-bottom-right-radius: var(--btn-border-radius);
+}
+
+.btn-group .btn + .btn {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Small Button Variants */
+.btn-sm {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 12px;
+}
+
+/* Loading State */
+.btn.loading {
+    pointer-events: none;
+    position: relative;
+    color: transparent !important;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Filter Toggle Icon Animation */
+.filter-toggle-icon {
+    transition: transform var(--transition-medium);
+}
+
+.filter-toggle-icon.rotated {
+    transform: rotate(180deg);
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .dropdown-toggle::after,
+    .dropdown-menu,
+    .filter-toggle-icon {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Focus Visible for Better Keyboard Navigation */
+.btn:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .btn {
+        border-width: 2px;
+    }
+    
+    .btn-outline-primary,
+    .btn-outline-secondary,
+    .btn-outline-success,
+    .btn-outline-info,
+    .btn-outline-warning {
+        border-width: 2px;
+    }
+}
+
+/* --- Invoice table header should remain solid, no hover color change --- */
+/* Ensure dark header keeps its background even when any hover rules exist globally */
+.table thead.table-dark,
+.table thead.table-dark th {
+    background-color: #343a40 !important;
+}
+
+/* Neutralize global hover styles that may target .table-dark within .table-hover */
+.table.table-hover thead.table-dark:hover,
+.table.table-hover thead.table-dark:hover th,
+.table.table-hover thead.table-dark tr:hover th {
+    background-color: #343a40 !important;
+}
+
+/* Optional: keep cursor default on header cells to reduce hover feedback */
+.table thead.table-dark th {
+    cursor: default;
+}

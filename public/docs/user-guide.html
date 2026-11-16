@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AtoZ Platform — Role-based User’s Guide</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; color: #222; }
+    h1, h2, h3 { color: #111; }
+    .title { text-align: center; margin-bottom: 16px; }
+    .subtitle { text-align: center; color: #555; }
+    .section { margin: 24px 0; }
+    .callout { background: #f7f7f9; border: 1px solid #e1e1e8; padding: 12px; }
+    .screenshot { border: 1px solid #bbb; padding: 12px; background: #fff; margin: 12px 0; }
+    .screenshot h3 { margin-top: 0; }
+    iframe { width: 100%; height: 800px; border: 1px solid #ccc; }
+    .muted { color: #666; font-size: 0.95em; }
+    .toc li { margin: 6px 0; }
+    @media print {
+      iframe { display: block; height: 700px; }
+      .print-note { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="title">
+    <h1>AtoZ Platform — Role-based User’s Guide</h1>
+    <div class="subtitle">Admins, Agents (Interpreters & Translators), and Clients</div>
+    <div class="muted">Tip: Use your browser’s “Print → Save as PDF” to generate the final PDF.</div>
+  </div>
+
+  <div class="section">
+    <h2>Table of Contents</h2>
+    <ol class="toc">
+      <li>Overview: Roles and Responsibilities</li>
+      <li>Access & Navigation</li>
+      <li>Admin Guide</li>
+      <li>Agent Guide (Interpreter & Translator)</li>
+      <li>Client Guide</li>
+      <li>Features & Possibilities</li>
+      <li>Operational Checklists</li>
+      <li>Troubleshooting & FAQs</li>
+      <li>UI Snapshots (Screenshots)</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>1) Overview: Roles and Responsibilities</h2>
+    <ul>
+      <li><strong>Admin</strong>: Full system manager. Jobs, invoicing, payslips, documents, exports, payments.</li>
+      <li><strong>Agent (Interpreter)</strong>: Accept assignments, perform service, submit timesheets & expenses, get payslip.</li>
+      <li><strong>Agent (Translator)</strong>: Accept assignments, handle documents, upload deliverables, get payslip.</li>
+      <li><strong>Client</strong>: Receive invoices & attachments, review and pay, request receipts.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>2) Access & Navigation</h2>
+    <ul>
+      <li>Jobs: Create & manage Interpreter/Translator jobs.</li>
+      <li>Accounting Reports: “Not Invoiced” filtering; create client invoices from selected jobs.</li>
+      <li>Invoices: Create, update, preview, and send; attach documents; VAT & parking; v2/v3 templates.</li>
+      <li>Payslips/Agent Invoices: Generate agent-side invoices; mark paid; export/email.</li>
+      <li>Documents: Attach timesheets (Interpreter) or deliverables (Translator).</li>
+      <li>Exports: Download CSV/Excel for reconciliation and reporting.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3) Admin Guide</h2>
+    <h3>A. Creating Jobs</h3>
+    <ul>
+      <li><strong>Interpreter</strong>: client, language, date/time, location, rate, VAT, references, notes; assign agent.</li>
+      <li><strong>Translator</strong>: client, language pair, service type, rate basis, VAT, references; assign agent; upload source docs.</li>
+    </ul>
+    <h3>B. Not Invoiced → Create Client Invoice (Batch)</h3>
+    <ul>
+      <li>Filter; select jobs; create ClientInvoice + ClientInvoiceItem(s) with job_type set.</li>
+      <li>Choose template v2/v3; review VAT & totals; attach documents.</li>
+    </ul>
+    <h3>C. Manual Invoice Edits</h3>
+    <ul>
+      <li>Add/remove items; set job_id & job_type; update metadata (dates, references, notes).</li>
+      <li>Totals and parking recomputed; header summary on first item (v2).</li>
+    </ul>
+    <h3>D. Send Client Invoices</h3>
+    <ul>
+      <li>Recipients, CC/BCC, subject/message overrides.</li>
+      <li>Attach Interpreter timesheets or Translator deliverables based on job_type.</li>
+    </ul>
+    <h3>E. Payments & Agent Payslips</h3>
+    <ul>
+      <li>Mark client invoices paid; export for reconciliation.</li>
+      <li>Generate agent invoices/payslips; email/export; mark agent payments processed.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4) Agent Guide</h2>
+    <h3>Interpreter Agent</h3>
+    <ul>
+      <li>Accept assignments; perform service; submit timesheets/expenses; review payslip.</li>
+    </ul>
+    <h3>Translator Agent</h3>
+    <ul>
+      <li>Review scope; download source docs; upload deliverables; review payslip.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>5) Client Guide</h2>
+    <ul>
+      <li>Receive invoice emails with attachments; review references, VAT, totals; pay and request receipts.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6) Features & Possibilities</h2>
+    <ul>
+      <li>Batch invoicing; multi-job v3 invoices; single-job v2.</li>
+      <li>job_type-aware documents and attachments.</li>
+      <li>Rich metadata per item; header summaries (v2); exports for reporting.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>7) Operational Checklists</h2>
+    <h3>Admin</h3>
+    <ul>
+      <li>Confirm job completion & documents attached; validate VAT & totals; choose template; send.</li>
+    </ul>
+    <h3>Agents</h3>
+    <ul>
+      <li>Interpreter: submit timesheet/expenses promptly.</li>
+      <li>Translator: upload clean final deliverables.</li>
+    </ul>
+    <h3>Client</h3>
+    <ul>
+      <li>Review and pay; request receipts/statements.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>8) Troubleshooting & FAQs</h2>
+    <ul>
+      <li>Job missing in “Not Invoiced”: check filters; verify job_id/job_type; ensure not already invoiced.</li>
+      <li>Attachments missing: ensure correct job_type and documents attached to the job.</li>
+      <li>VAT/Total discrepancies: confirm item VAT flags; template (v2/v3); parking logic.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>9) UI Snapshots (Screenshots)</h2>
+    <div class="callout print-note">These embedded pages are live snapshots. When you print to PDF, they will be captured with the current data.</div>
+
+    <div class="screenshot">
+      <h3>Invoices Admin</h3>
+      <div class="muted">Source: /invoices/admin</div>
+      <iframe src="/invoices/admin" title="Invoices Admin"></iframe>
+    </div>
+
+    <div class="screenshot">
+      <h3>Accounting Reports (Dev Preview)</h3>
+      <div class="muted">Source: /dev/preview/admin/job-payments</div>
+      <iframe src="/dev/preview/admin/job-payments" title="Accounting Reports (Dev)"></iframe>
+    </div>
+  </div>
+
+  <div class="section" style="text-align:center; color:#777; font-size: 0.95em;">
+    Generated locally — use “Print → Save as PDF” to export.
+  </div>
+</body>
+<html>

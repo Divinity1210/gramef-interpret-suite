@@ -1,0 +1,107 @@
+ATOZ INVOICE STEPS 
+Here’s the entire Invoice → Payslip → Remittance process laid out as a single, sequential set of steps. Follow them in order without skipping.
+1. Agent enters job amounts
+   * Agent selects a job.
+   * Agent enters the base amount for that job.
+2. Agent adds job-level expenses
+   * In the same form, agent can add any combination of packing fees, travel fees, fixes, or other miscellaneous expenses.
+3. Agent submits job entry
+   * System calculates “Invoice Amount” = base amount + all expenses.
+   * Entry is saved under the agent’s “Pending Jobs” list.
+4. Agent repeats for multiple jobs
+   * The agent may repeat steps 1–3 for as many jobs as needed during the month.
+5. Agent generates monthly invoice
+   * At month-end, agent picks a date range (e.g. May 1–31).
+   * Agent clicks Create Invoice.
+   * System bundles all job-entries in that range into one invoice and moves it to the Agent ▶️ Invoices menu.
+6. Agent reviews or prints invoice
+   * In Agent ▶️ Invoices, agent sees each invoice row.
+   * They can click View Jobs to list all jobs and amounts.
+   * They can click Print to generate a PDF.
+7. Admin notified of new agent invoice
+   * As soon as an agent invoice is created, admin receives an email alert.
+   * The same invoice appears in Admin ▶️ Invoices.
+8. Admin views invoice details
+   * In Admin ▶️ Invoices, admin clicks View on the new invoice.
+   * They see all jobs, amounts, expenses, agent name, dates.
+9. Admin creates payslip
+   * From invoice view, admin clicks Create Payslip.
+   * System loads all jobs into a Payslip form.
+10. Admin edits payslip lines
+   * Admin can adjust any amount up or down.
+   * Admin can add new jobs by entering a valid Job ID (belonging to that agent).
+   * Admin can delete any jobs they don’t wish to pay.
+11. Admin submits payslip
+   * On submit, system creates a payslip record.
+   * Admin is redirected to Admin ▶️ Payslips, and agent sees the same payslip under Agent ▶️ Payslips.
+12. Admin’s payslip actions
+   * Re-edit: unlocks the form to adjust amounts again.
+   * View/Print: shows A–Z payslip format and a Print button.
+   * Approve: marks payslip as paid.
+13. Agent adds bank details
+   * Prior to payment, agent must supply/update bank info under My Account.
+   * If missing, payslip view shows N/A for bank fields.
+14. Admin approves payslip payment
+   * Once funds are transferred, admin clicks Approve on the payslip.
+   * Payslip status updates to Paid, completing the agent payment cycle.
+________________
+
+
+15. Admin prepares client invoice: ensure timesheets exist
+   * Admin verifies all relevant jobs have been signed off in Timesheets.
+16. Filter/select jobs for client invoicing
+   * Use filters: Agent Name, Client Name, Date Range, or “Has Invoice Amount.”
+   * Or select a single job row to invoice just that one.
+17. Admin adds invoice-specific details
+   * In the timesheet row, click Edit Invoice Details (opens modal).
+   * Modal fields:
+      1. Invoice Amount (pre-filled from job total)
+      2. Surcharge (optional)
+      3. Other Charges (optional)
+      4. VAT? dropdown (Yes/No)
+18. Save invoice details
+   * Modal save updates that row’s “Invoice Amount” in timesheet.
+19. Create client invoice batch
+   * After setting details on each row, apply filters to show all jobs to invoice.
+   * Click Create Invoice—you’ll land on the New Client Invoice page.
+20. Review and set global invoice options
+   * Table shows: Job ID, Agent, Client, Company, Dates, Amounts.
+   * VAT dropdown (applies VAT to entire batch)
+   * Invoice Type dropdown (choose template): e.g. Standard, Pro Forma, Credit Note
+21. Generate client invoice
+   * Click Generate Invoice.
+   * System shows the selected template with all jobs, line-item charges, subtotal, VAT (if any), and Grand Total.
+22. Send to client
+   * Review details; click Send Invoice.
+   * Invoice moves to Admin ▶️ Remittances, and client receives an email/notification.
+________________
+
+
+23. Client views invoice
+   * Client logs into Client ▶️ Invoices.
+   * They see the invoice, date range, total amount.
+   * View Jobs shows the breakdown.
+   * View Invoice shows printable template.
+24. Client uploads remittance slip
+   * In Client ▶️ Invoices, click Upload Remittance Slip.
+   * Client selects or drags a proof-of-payment file.
+   * On successful upload, client sees a confirmation message; admin is alerted.
+25. Admin processes remittance
+   * In Admin ▶️ Remittances, admin reviews the uploaded slip.
+   * If payment hasn’t cleared, admin can message the client or request a new slip.
+   * Once confirmed, admin clicks Approve Payment.
+26. Finalize client invoice
+   * Status changes to Paid.
+   * In client view, Upload Remittance Slip disappears; only View/Print remains.
+________________
+
+
+27. Export reporting
+   * Admin can go to Exports and choose to export Invoices, Payslips, or Remittances.
+   * Apply filters: Client Name, Agent Name, Date Range.
+   * Export file (CSV or Excel) contains:
+      * All job line-items
+      * Associated Invoice ID / Payslip ID / Remittance ID
+      * Agent, Client, Company, Dates, Amounts, VAT, Surcharges
+28. End of cycle
+   * All records—agent invoices, admin payslips, client invoices, remittances—are now stored, printable, and reportable.

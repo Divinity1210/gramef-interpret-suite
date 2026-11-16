@@ -1,0 +1,61 @@
+# === Laravel Backend ===
+/vendor
+node_modules
+.env
+.env.backup*
+.env.local
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+# === Storage, Cache & Backups ===
+/storage
+/backups
+/bootstrap/cache/*.php
+!/bootstrap/cache/packages.php
+!/bootstrap/cache/services.php
+
+# === Build artifacts (un-ignored for Vercel deployment) ===
+/public/hot
+/public/storage
+# /public/css  — needed on Vercel
+# /public/js   — needed on Vercel
+# /public/mix-manifest.json  — needed on Vercel
+*.zip
+*.tar.gz
+
+# === Large files (SQL dumps, etc.) ===
+*.sql
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Mobile App ===
+/mobile/node_modules
+/mobile/.expo
+/mobile/dist
+/mobile/android
+/mobile/ios
+/mobile/.env.local
+/mobile/.vercel
+
+# === Temporary files ===
+/tmp
+/storage-old
+*.bak
+cookies.txt
+.cookies
+.cookies8020
+token.txt
+error_log
+build.log
+
+# === IDE ===
+*.swp
+*.swo
+*~

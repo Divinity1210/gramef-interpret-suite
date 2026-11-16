@@ -1,0 +1,294 @@
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    position: relative;
+    border-radius: 23px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    &:hover {
+        color: white;
+    }
+
+    &--primary {
+        background-color: $orange;
+        border-radius: 23px;
+    }
+
+    &--secondary {
+        background-color: $blue;
+        border-radius: 28.9286px;
+    }
+
+    &--grey {
+        background-color: $grey;
+        border-radius: 23px;
+    }
+
+    &--cancel,
+    &--reject {
+        background-color: $red;
+        border-radius: 27.3649px;
+    }
+
+    &--delete {
+        background-color: $red;
+        border-radius: 23px;
+    }
+
+    &--logout {
+        background-color: $grey;
+    }
+
+    &--small {
+        height: 35px;
+        margin: auto;
+        font-size: 14px;
+        border-radius: 23px;
+    }
+
+    &--get-directions {
+        position: absolute;
+        left: 24px;
+        bottom: 21px;
+        height: 35px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+// Outline button overrides: make default state solid backgrounds for accessibility
+.btn-outline-primary {
+  color: #212529;
+  background-color: $orange;
+  border-color: $orange;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  color: #212529;
+  background-color: $orange;
+  border-color: $orange;
+}
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+  color: #212529;
+  background-color: $orange;
+  border-color: $orange;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+}
+.btn-outline-secondary.disabled,
+.btn-outline-secondary:disabled {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.btn-outline-success {
+  color: #212529;
+  background-color: $green;
+  border-color: $green;
+}
+.btn-outline-success:hover,
+.btn-outline-success:focus,
+.btn-outline-success:active {
+  color: #212529;
+  background-color: $green;
+  border-color: $green;
+}
+.btn-outline-success.disabled,
+.btn-outline-success:disabled {
+  color: #212529;
+  background-color: $green;
+  border-color: $green;
+}
+
+.btn-outline-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.btn-outline-info:hover,
+.btn-outline-info:focus,
+.btn-outline-info:active {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+.btn-outline-info.disabled,
+.btn-outline-info:disabled {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-outline-warning {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.btn-outline-warning:hover,
+.btn-outline-warning:focus,
+.btn-outline-warning:active {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.btn-outline-warning.disabled,
+.btn-outline-warning:disabled {
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-outline-danger {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+.btn-outline-danger:hover,
+.btn-outline-danger:focus,
+.btn-outline-danger:active {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+.btn-outline-danger.disabled,
+.btn-outline-danger:disabled {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn-outline-light {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}
+.btn-outline-light.disabled,
+.btn-outline-light:disabled {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}
+
+.btn-outline-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.btn-outline-dark.disabled,
+.btn-outline-dark:disabled {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-outline-red {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+.btn-outline-red:hover,
+.btn-outline-red:focus,
+.btn-outline-red:active {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+.btn-outline-red.disabled,
+.btn-outline-red:disabled {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn-outline-purple {
+  color: #fff;
+  background-color: $purple;
+  border-color: $purple;
+}
+.btn-outline-purple:hover,
+.btn-outline-purple:focus,
+.btn-outline-purple:active {
+  color: #fff;
+  background-color: $purple;
+  border-color: $purple;
+}
+.btn-outline-purple.disabled,
+.btn-outline-purple:disabled {
+  color: #fff;
+  background-color: $purple;
+  border-color: $purple;
+}
+
+.btn-outline-gray {
+  color: #212529;
+  background-color: $grey;
+  border-color: $grey;
+}
+.btn-outline-gray:hover,
+.btn-outline-gray:focus,
+.btn-outline-gray:active {
+  color: #212529;
+  background-color: $grey;
+  border-color: $grey;
+}
+.btn-outline-gray.disabled,
+.btn-outline-gray:disabled {
+  color: #212529;
+  background-color: $grey;
+  border-color: $grey;
+}
+
+.btn-outline-light-gray {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}
+.btn-outline-light-gray:hover,
+.btn-outline-light-gray:focus,
+.btn-outline-light-gray:active {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}
+.btn-outline-light-gray.disabled,
+.btn-outline-light-gray:disabled {
+  color: #212529;
+  background-color: $gallery;
+  border-color: $gallery;
+}

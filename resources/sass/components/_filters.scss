@@ -1,0 +1,59 @@
+/* Shared filter styles (Job Board pattern)
+   Use on any page-level filter container: .filters or .filter
+   Ensures consistent pill look, spacing, and widths across the app. */
+
+/* Intentionally no base styles applied to the filter container to keep pages neutral */
+
+/* Pill appearance for inputs/selects, matching Job Board */
+.filters .form-select,
+.filters .form-control,
+.filters .input,
+.filters .input--date-filter,
+.filter .form-select,
+.filter .form-control,
+.filter .input,
+.filter .input--date-filter {
+  border-radius: 999px;
+  min-height: 45px;
+  padding: 10px 16px;
+  border: 1px solid #000; /* black border per Job Board */
+  background: #fff;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+}
+
+.filters .form-select:focus,
+.filters .form-control:focus,
+.filters .input:focus,
+.filters .input--date-filter:focus,
+.filter .form-select:focus,
+.filter .form-control:focus,
+.filter .input:focus,
+.filter .input--date-filter:focus {
+  outline: none;
+  border-color: #84c5f4;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04), 0 0 0 3px rgba(13,110,253,0.15);
+}
+
+/* Full-column width pills (only for pages using `.filters` container).
+   Preserve Job Board/legacy `.filter` density which relies on fixed widths. */
+.filters .section__input {
+  width: 100%;
+}
+
+/* Consistent vertical spacing between rows */
+.filters .row,
+.filter .row {
+  row-gap: 8px;
+}
+
+/* Visually hidden labels for accessibility when placeholders communicate purpose */
+.filters .form-label.visually-hidden,
+.filter .form-label.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -1,0 +1,21 @@
+node:fs:3035
+  binding.copyFile(
+          ^
+
+Error: ENOENT: no such file or directory, copyfile 'public/sw.js' -> 'dist/sw.js'
+    at Object.copyFileSync (node:fs:3035:11)
+    at [eval]:1:15
+    at runScriptInThisContext (node:internal/vm:209:10)
+    at node:internal/process/execution:118:14
+    at [eval]-wrapper:6:24
+    at runScript (node:internal/process/execution:101:62)
+    at evalScript (node:internal/process/execution:133:3)
+    at node:internal/main/eval_string:51:3 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'copyfile',
+  path: 'public/sw.js',
+  dest: 'dist/sw.js'
+}
+
+Node.js v20.19.4
